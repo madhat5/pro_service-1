@@ -1,10 +1,13 @@
 # pro_service-1
 
-### Ref docs
+### Ref
 - https://colorlib.com/wp/support/illdy/
 - https://oxfordvp.com/
 - https://www.youtube.com/watch?v=sd0grLQ4voU&t=1742s
 - https://codex.wordpress.org/Installing_WordPress
+
+## Assets
+- https://www.istockphoto.com/
 
 
 Time:
@@ -13,6 +16,8 @@ Time:
     - identify Theme
 #### 20min
 - WP setup
+#### 45min
+- Site build
 <!-- #### 25 min
 - HostGator setup -->
 
@@ -22,9 +27,7 @@ Workflow:
 - Install WP (x)
     - create wp-config
     - create DB in phpMyAdmin
-    - WP:
-        - mald
-        - BxP3!n8fgEGXP%pxdi
+    - WP admin setup
 - Site build (ox)
 - Domain name
     - projectName.com
