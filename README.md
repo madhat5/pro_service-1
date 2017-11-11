@@ -11,17 +11,20 @@ Time:
 #### 20min
 - project research
     - identify Theme
-#### 25 min
-- HostGator setup
+#### 20min
+- WP setup
+<!-- #### 25 min
+- HostGator setup -->
 
 
 
 Workflow:
 - Install WP ox
-    - Database name
-    - Database username
-    - Database password
-    - Database host
+    - create wp-config
+    - create DB in phpMyAdmin
+    - WP:
+        - mald
+        - BxP3!n8fgEGXP%pxdi
 - Site build
 - Domain name
     - projectName.com
