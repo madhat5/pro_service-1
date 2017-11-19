@@ -171,6 +171,8 @@ a:hover, a:focus {
 #header .top-header {
 	width: 100%;
 	padding-top: 40px;
+	position: fixed;
+	z-index: 99;
 }
 
 #header .top-header .header-logo {
@@ -1385,7 +1387,7 @@ a.button:hover {
 	text-transform: initial;
 }
 #footer .widget table#wp-calendar tbody tr td a {
-	width: calc( 100% + 8px );	
+	width: calc( 100% + 8px );
 	height: calc( 100% + 8px );
 	left: -4px;
 	top: -4px;
