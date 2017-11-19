@@ -171,8 +171,8 @@ a:hover, a:focus {
 #header .top-header {
 	width: 100%;
 	padding-top: 40px;
-	position: fixed;
-	z-index: 99;
+	/*position: fixed;
+	z-index: 99;*/
 }
 
 #header .top-header .header-logo {
@@ -185,6 +185,10 @@ a:hover, a:focus {
 	transition: all 0.3s;
 	line-height: 75px;
 	font-weight: 700;
+}
+
+.header-logo-scroll {
+	font-size: 45px;
 }
 
 #header .top-header .header-logo:hover {
@@ -2908,8 +2912,16 @@ header#header {
     z-index: 1;
 }
 #header .top-header {
-	position: relative;
-	z-index: 3;
+	position: fixed;
+	z-index: 99;
+}
+
+.scroll-header {
+	position: fixed;
+    z-index: 99;
+    background-color: #333333 !important;
+    padding-top: 5px !important;
+    opacity: .8;
 }
 
 .responsive-menu,

@@ -5,9 +5,15 @@
 - https://oxfordvp.com/
 - https://www.youtube.com/watch?v=sd0grLQ4voU&t=1742s
 - https://codex.wordpress.org/Installing_WordPress
+- https://code.tutsplus.com/tutorials/using-gulp-for-wordpress-automation--cms-23081
 
 ## Assets
 - https://www.istockphoto.com/
+
+## Resources
+- https://wordpress.org/plugins/dynamic-to-top/
+- https://cssminifier.com/
+- https://javascript-minifier.com/
 
 
 Time:

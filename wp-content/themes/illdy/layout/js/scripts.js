@@ -92,6 +92,18 @@ jQuery( document ).ready( function($) {
 		}
 	}
 
+
+	function navBarScroll() {
+		$(window).scroll*function()	 {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >=500) new Promise(function(resolve, reject) {
+				$('.top-header').addClass('.scroll-header');
+				// $('.header-logo').addClass('.header-logo-scroll');
+			});
+		}
+	}
+
 	// Called Functions
 	$( function() {
 		isIsIOS();
@@ -101,6 +113,7 @@ jQuery( document ).ready( function($) {
 		setColorOnFrontPageService();
 		setColorOnFrontPagePerson();
 		alignSubSubMenu();
+		navBarScroll();
 	});
 
 	// Window Resize
