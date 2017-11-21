@@ -79,15 +79,6 @@ jQuery( document ).ready( function($) {
 		}
 	}
 
-	// Sub Menu
-	function subMenu() {
-		$( '#header .top-header .header-navigation ul li.menu-item-has-children' ).hover( function() {
-			$( this ).children( 'ul' ).css( 'visibility', 'visible' );
-		}, function() {
-			$( this ).children( 'ul' ).css( 'visibility', 'hidden' );
-		});
-	}
-
 	// Align Sub Sub Menu
 	function alignSubSubMenu() {
 		if( $( '#header .top-header .header-navigation ul li.menu-item-has-children' ).length ) {
@@ -101,6 +92,18 @@ jQuery( document ).ready( function($) {
 		}
 	}
 
+
+	function navBarScroll() {
+		$(window).scroll*function()	 {
+			var scroll = $(window).scrollTop();
+
+			if (scroll >=500) new Promise(function(resolve, reject) {
+				$('.top-header').addClass('.scroll-header');
+				// $('.header-logo').addClass('.header-logo-scroll');
+			});
+		}
+	}
+
 	// Called Functions
 	$( function() {
 		isIsIOS();
@@ -109,8 +112,8 @@ jQuery( document ).ready( function($) {
 		addHeightToFrontPageProject();
 		setColorOnFrontPageService();
 		setColorOnFrontPagePerson();
-		subMenu();
 		alignSubSubMenu();
+		navBarScroll();
 	});
 
 	// Window Resize
