@@ -24,6 +24,8 @@ Time:
 - WP setup
 #### 45min
 - Site build
+#### 60min
+- Site build
 <!-- #### 25 min
 - HostGator setup -->
 
