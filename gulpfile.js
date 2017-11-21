@@ -34,7 +34,7 @@ gulp.task('css', function () {
 // JS Minification
 gulp.task('js', function (cb) {
   pump([
-        gulp.src('./wp-content/themes/illdy/layout/**/*.js')
+        gulp.src('./wp-content/themes/illdy/layout/*.js')
         .pipe(plumber(plumberErrorHandler))
         .pipe(uglify())
         .pipe(gulp.dest('./wp-content/themes/illdy/layout/*.min.js'))
@@ -57,6 +57,6 @@ gulp.task('default', ['css', 'js']);
 
 // Watch task
 gulp.task('watch', function() {
-  gulp.watch('./wp-content/themes/illdy/layout/css/*.min.css', ['css']);
-  gulp.watch('./wp-content/themes/illdy/layout/*.min.js', ['js', 'browserSync.reload']);
+  gulp.watch('./wp-content/themes/illdy/layout/css/*.css', ['css']);
+  gulp.watch('./wp-content/themes/illdy/layout/*.js', ['js', 'browserSync.reload']);
 });
