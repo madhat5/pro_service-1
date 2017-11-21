@@ -5,7 +5,6 @@ var     gulp        = require('gulp'),
         zip         = require('gulp-zip'),
         notify      = require("gulp-notify"),
         plumber     = require('gulp-plumber'),
-        coffee      = require('gulp-coffee');
         browserSync = require('browser-sync');
 
 var reload      = browserSync.reload;
@@ -28,18 +27,18 @@ gulp.task('css', function () {
       "maxLineLen": 80,
       "uglyComments": true
     }))
-    .pipe(gulp.dest('./wp-content/themes/illdy/layout/css/'));
+    .pipe(gulp.dest('./wp-content/themes/illdy/layout/css/*.min.css'))
     .pipe(notify({ message: 'CSS minification complete', onLast: true }));
 });
 
 // JS Minification
 gulp.task('js', function (cb) {
   pump([
-        gulp.src('./wp-content/themes/illdy/layout/**/*.js'),
+        gulp.src('./wp-content/themes/illdy/layout/**/*.js')
         .pipe(plumber(plumberErrorHandler))
-        uglify(),
-        gulp.dest('./wp-content/themes/illdy/layout/**/*.js')
-        .pipe(notify({ message: 'JS minification complete', onLast: true }));
+        .pipe(uglify())
+        .pipe(gulp.dest('./wp-content/themes/illdy/layout/*.min.js'))
+        .pipe(notify({ message: 'JS minification complete', onLast: true }))
     ],
     cb
   );
@@ -50,7 +49,7 @@ gulp.task('default', () =>
 	gulp.src('wp-content/*')
 		.pipe(zip('WP_ProService-1.zip'))
 		.pipe(gulp.dest('dist'))
-    .pipe(notify({ message: 'Source zipped', onLast: true }));
+    .pipe(notify({ message: 'Source zipped', onLast: true }))
 );
 
 // Default
@@ -58,6 +57,6 @@ gulp.task('default', ['css', 'js']);
 
 // Watch task
 gulp.task('watch', function() {
-  gulp.watch('./wp-content/themes/illdy/layout/css/*.css', ['css']);
-  gulp.watch('./wp-content/themes/illdy/layout/**/*.js', ['js', 'browserSync.reload']);
+  gulp.watch('./wp-content/themes/illdy/layout/css/*.min.css', ['css']);
+  gulp.watch('./wp-content/themes/illdy/layout/*.min.js', ['js', 'browserSync.reload']);
 });
