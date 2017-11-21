@@ -29,6 +29,8 @@ Time:
 - Site build
 #### 60min
 - Site build
+#### 90min
+- Site build
 <!-- #### 25 min
 - HostGator setup -->
 
