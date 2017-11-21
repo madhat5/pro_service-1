@@ -1,12 +1,14 @@
-var     gulp = require('gulp'),
-        uglifycss = require('gulp-uglifycss'),
-        uglify = require('gulp-uglify'),
-        pump = require('pump'),
-        zip = require('gulp-zip'),
-        notify = require("gulp-notify"),
-        plumber = require('gulp-plumber'),
-        coffee = require('gulp-coffee');
+var     gulp        = require('gulp'),
+        uglifycss   = require('gulp-uglifycss'),
+        uglify      = require('gulp-uglify'),
+        pump        = require('pump'),
+        zip         = require('gulp-zip'),
+        notify      = require("gulp-notify"),
+        plumber     = require('gulp-plumber'),
+        coffee      = require('gulp-coffee');
+        browserSync = require('browser-sync');
 
+var reload      = browserSync.reload;
 
 var plumberErrorHandler = { errorHandler: notify.onError({
   title: 'Gulp',
@@ -43,13 +45,6 @@ gulp.task('js', function (cb) {
   );
 });
 
-// Watch task
-gulp.task('watch', function() {
-  gulp.watch('./wp-content/themes/illdy/layout/css/*.css', ['css']);
-  gulp.watch('./wp-content/themes/illdy/layout/**/*.js', ['js']);
-
-});
-
 // Zip task
 gulp.task('default', () =>
 	gulp.src('wp-content/*')
@@ -58,4 +53,11 @@ gulp.task('default', () =>
     .pipe(notify({ message: 'Source zipped', onLast: true }));
 );
 
+// Default
 gulp.task('default', ['css', 'js']);
+
+// Watch task
+gulp.task('watch', function() {
+  gulp.watch('./wp-content/themes/illdy/layout/css/*.css', ['css']);
+  gulp.watch('./wp-content/themes/illdy/layout/**/*.js', ['js', 'browserSync.reload']);
+});
