@@ -6,15 +6,18 @@
 - https://www.youtube.com/watch?v=sd0grLQ4voU&t=1742s
 - https://codex.wordpress.org/Installing_WordPress
 - https://code.tutsplus.com/tutorials/using-gulp-for-wordpress-automation--cms-23081
+- https://ahmadawais.com/my-advanced-gulp-workflow-for-wordpress-themes/
 
-## Assets
+### Assets
 - https://www.istockphoto.com/
 
-## Resources
+### Resources
 - https://wordpress.org/plugins/dynamic-to-top/
 - https://cssminifier.com/
 - https://javascript-minifier.com/
 
+### Troubleshooting
+- https://colorlib.com/wp/forums/topic/fix-the-nav-bar-at-the-top-while-scrolling/
 
 Time:
 #### 20min
